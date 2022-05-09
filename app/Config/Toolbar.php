@@ -32,7 +32,7 @@ class Toolbar extends BaseConfig
      * fires up and collects data from.
      *
      * @var string[]
-     */
+     **/
     public $collectors = [
         Timers::class,
         Database::class,
@@ -54,7 +54,7 @@ class Toolbar extends BaseConfig
      *
      * @var bool
      */
-    public $collectVarData = true;
+   public $collectVarData = true;
 
     /**
      * --------------------------------------------------------------------------

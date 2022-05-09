@@ -32,8 +32,14 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-$routes->get('/', 'CarteController::index', ["as" => "Carte"]);
-$routes->get('/test', 'CarteController::getVilles', ["as"=> "Test"]);
+// custom routes
+$routes->get('/', 'SigninController::index');
+$routes->get('/signup', 'SignupController::index');
+$routes->get('/signin', 'SigninController::index');
+$routes->get('/carte', 'CarteController::index', ['filter' => 'authGuard']);
+$routes->get('/test','CarteController::getVilles');
+$routes->get('/coordonnees', 'CarteController::getCoordonnees');
+$routes->get('/rayon', 'CarteController::getParcours');
 
 
 

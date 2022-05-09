@@ -1,7 +1,7 @@
 <?php
+
 foreach($query as $v){
-    echo $v["NAME"]."<br>";
+    echo $v['NAME'].','.$v['ZIP_CODE'].';';
 }
-echo 'salut';
 
 ?>
